@@ -20,7 +20,7 @@ public class TimeMethodInterceptor implements MethodInterceptor {
         log.info("Time Proxy 실행");
         long startTime = System.currentTimeMillis();
 
-        Object result = methodProxy.invoke(obj, args);
+        Object result = methodProxy.invoke(target, args);
 
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
